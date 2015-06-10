@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   protect_from_forgery with: :exception
 
 	def index
-		@article = Article.all
+		@article = Article.all.sort_by{|article| article.title}
 	end
 
 	def show
