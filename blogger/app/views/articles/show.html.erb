@@ -7,6 +7,12 @@
 		<%= link_to tag.name, tag_path(tag) %>
 	<% end %>
 </p>
+
+<p>
+	<% if @article.image.exists? %>
+			<%= image_tag @article.image.url %><br>
+	<% end %>
+</p>
 <br>
 <p><%= @article.body %></p>
 <br>
